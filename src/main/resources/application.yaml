@@ -1,0 +1,33 @@
+spring:
+  config:
+    name: project2
+  datasource:
+      url: jdbc:postgresql://localhost:5432/testdb
+      username: postgres
+      password: 1
+      driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql:
+server:
+  port: 8888
+
+jwt:
+  secret: mySecretKey123456789012345678901234567890
+  expiration: 86400000
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
+
+
+

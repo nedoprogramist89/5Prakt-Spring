@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>Вывод всех студентов</h2>
+    <form action="/student/create" method="get">
+        <button >Добавление студентов</button>
+    </form>
+    <ul>
+        <th:block th:each="student : ${students}">
+            <li th:text="${student.getId()} +' '+  ${student.getName()} +' '+ ${student.getEmail()} + ' ' + ${student.getPassword()}">
+            </li>
+        </th:block>
+    </ul>
+</body>
+</html>
